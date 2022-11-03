@@ -1,7 +1,10 @@
 import { useEffect, useState } from "react";
 import LegendCard from "./LegendCard";
 import LegendForm from "./LegendForm"; 
-import {Routes ,Route} from "react-router-dom";
+import {
+    Switch,
+    Route
+  } from "react-router-dom";
 
 
 function LegendsPage(){
@@ -20,6 +23,14 @@ function LegendsPage(){
     const updateLegend = (updatedLegend) => {
       
 
+        // return legends.map(legend => {
+        //     if (updatedLegend.id === legend.id){
+        //         return updatedLegend
+        //     } else {
+        //         return legend
+        //     }
+        // })
+
         const newLegends = legends.map(legend => {
             if(updatedLegend.id === legend.id){
                 return updatedLegend
@@ -31,21 +42,30 @@ function LegendsPage(){
         setLegends(newLegends)
     }
 
+//     <Routes>
+//     <Route  path="/legends" element={<LegendsPage />}/>
+//     <Route  path="/" element={<h1>Home</h1>}/>
+//     <Route  path="/new" element={<LegendForm />}/>
+
+//   </Routes>
     return (
         <div>
-            <Routes>
+            <Switch>
                 <Route exact path="/legends/new">
                     <LegendForm addNewLegend={addNewLegend} />
                 </Route>
 
-                <Route exact path="/legends/:id/edit">
+                {/* <Route exact path="/legends/:id/edit">
                     <LegendForm legends={legends} />
-                </Route>
+                </Route> */}
 
-                <Route path="/legends">
-                    {legends.map(l => <LegendCard legend={l} key={l.id} updateLegend={updateLegend}/>)}
+                <Route exact path="/legends/:id/edit">
+                   <LegendForm legends={legends}/>
+                   </Route>
+                   <Route path="/legends">
+                    {legends.map(h => <LegendCard legend={h} key={h.id} updateLegend={updateLegend}/>)}
                 </Route>
-            </Routes>
+            </Switch>
         </div>
     )
 }

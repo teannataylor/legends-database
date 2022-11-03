@@ -7,7 +7,7 @@ function NavBar(){
         width: '100px',
         padding: '12px',
         margin: '0 6px 6px',
-        background: 'blue',
+        background: 'red',
         textDecoration: 'none',
         color: 'white',
       }
@@ -16,9 +16,9 @@ function NavBar(){
     return (
         <div>
             <h1>Apex Legends Homepage</h1>
-            <NavLink to="/legends" style={link} exact activeStyle={{background: 'darkblue'}}>All Legends</NavLink>
-            <NavLink to="/legends/new" style={link} exact activeStyle={{background: 'darkblue'}}>New Legend</NavLink>
-            <NavLink to="/" style={link} exact activeStyle={{background: 'darkblue'}}>HOME</NavLink>
+            <NavLink to="/legends" style={link} exact activeStyle={{background: 'darkred'}}>All Legends</NavLink>
+            <NavLink to="/legends/new" style={link} exact activeStyle={{background: 'darkred'}}>New Legend</NavLink>
+            <NavLink to="/" style={link} exact activeStyle={{background: 'darkred'}}>Home</NavLink>
         </div>
     )
 }
