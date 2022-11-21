@@ -23,14 +23,6 @@ function LegendsPage(){
     const updateLegend = (updatedLegend) => {
       
 
-        // return legends.map(legend => {
-        //     if (updatedLegend.id === legend.id){
-        //         return updatedLegend
-        //     } else {
-        //         return legend
-        //     }
-        // })
-
         const newLegends = legends.map(legend => {
             if(updatedLegend.id === legend.id){
                 return updatedLegend

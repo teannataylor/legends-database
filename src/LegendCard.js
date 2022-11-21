@@ -1,7 +1,8 @@
-import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom';
+import ReactPlayer from "react-player";
 
 function LegendCard({legend, updateLegend}){
-    const {id, name, nickname, legendtype,likes} = legend
+    const {id, name, nickname, legendType,likes, trailer} = legend
  
     function upVote(e){
         // add code here to do a patch request
@@ -26,8 +27,12 @@ function LegendCard({legend, updateLegend}){
     return (
         <div className="card">
             <h2>{name}</h2>
+            <div>
+            <ReactPlayer url={trailer}   />
+            </div>
+            
             <h2>{nickname}</h2>
-            <h3>{legendtype}</h3>
+            <h3>Legend Type: {legendType}</h3>
             <p>{likes} likes</p><span onClick={upVote}>👍</span>
             <div>
                 <Link to={`/legends/${id}/edit`}><button>Edit</button></Link>

@@ -29,7 +29,7 @@
       "summaryThree": "Call in an artillery strike that slowly creeps across the landscape.",
       "pickRate": 4.6,
       "season": 1,
-      "likes": 1,
+      "likes": 2,
       "trailer": "https://www.youtube.com/watch?v=JyJhFYNob30&t=1s"
     },
     {
@@ -205,8 +205,17 @@
       "summaryThree": "Deploy a jump pad that catapults teammates through the air.",
       "pickRate": 11.6,
       "season": 1,
-      "likes": 1,
+      "likes": 2,
       "trailer": "https://www.youtube.com/watch?v=aOdTqvcEaZ8"
+    },
+    {
+      "name": "Seer",
+      "nickname": "Ambush Artist",
+      "trailer": "https://www.youtube.com/watch?v=FsidQPVzFDU",
+      "legendType": "Offensive",
+      "likes": 0,
+      "id": 14
     }
+
   ]
 }

@@ -4,8 +4,8 @@
 
 
 .card {
-  height: 70vmin;
-  width: 50vmin;
+  height: 100vmin;
+  width: 86vmin;
   background-color: lightslategrey;
 }
 
@@ -16,14 +16,14 @@ img {
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #ededbe;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: rgb(190, 49, 49);
 }
 
 .App-link {
